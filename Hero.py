@@ -6,6 +6,9 @@ from sklearn.ensemble import RandomForestClassifier
 from KaggleWord2VecUtility import KaggleWord2VecUtility
 import pandas as pd
 import numpy as np
+import csv
+import matplotlib.pyplot as plt
+
 
 if __name__ == '__main__':
     train = pd.read_csv("labeledTrainData.tsv", header=0, \
@@ -94,3 +97,9 @@ if __name__ == '__main__':
     # Use pandas to write the comma-separated output file
     output.to_csv('Bag_of_Words_model.csv', index=False, quoting=3)
     print ("Wrote results to Bag_of_Words_model.csv")
+
+
+    df = pd.read_csv("Bag_of_Words_model.csv", usecols=['sentiment'])
+    counts = df['sentiment'].value_counts()
+    print (counts)
+    plt.show(counts)
