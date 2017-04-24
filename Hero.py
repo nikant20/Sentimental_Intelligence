@@ -8,6 +8,8 @@ import pandas as pd
 import numpy as np
 import csv
 import matplotlib.pyplot as plt
+from pylab import *
+
 
 
 if __name__ == '__main__':
@@ -98,8 +100,31 @@ if __name__ == '__main__':
     output.to_csv('Bag_of_Words_model.csv', index=False, quoting=3)
     print ("Wrote results to Bag_of_Words_model.csv")
 
-
+    # Reading sentiment column from Bag_of_Words_model.csv
     df = pd.read_csv("Bag_of_Words_model.csv", usecols=['sentiment'])
+
+    # Counting the number of values
     counts = df['sentiment'].value_counts()
+
+    # Printing the number of values
     print (counts)
-    plt.show(counts)
+
+    # Naming the labels in Pie Chart
+    labels = 'Negative','Positive'
+
+    # Giving colours to pie chart
+    colors = ['lightcoral', 'lightskyblue']
+
+    # Exploding the pie chart
+    explode = (0.1, 0)
+
+    # Plotting the values
+    plt.pie(counts , labels=labels , explode=explode, colors=colors, shadow = True)
+
+    # Creating the pie chart
+    plt.axis('equal')
+
+    # Showing the pie chart
+    plt.show()
+
+
