@@ -1,0 +1,59 @@
+\documentclass[a4paper,12pt,oneside]{treport}
+\usepackage{hyperref}
+\hypersetup{urlcolor=blue, colorlinks=true}
+\usepackage[square,numbers]{natbib}
+%\usepackage{times}
+\usepackage{setspace}
+%\usepackage{chapterbib}
+\usepackage{verbatim}
+%\usepackage{vector}
+\usepackage{makeidx}
+%\usepackage{mathptmx}
+%\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage[compact]{titlesec}
+\usepackage{listings}
+
+\usepackage{color}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},   
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b, 
+	frame= shadowbox,                   
+	keepspaces=true,                 
+    showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2}
+
+\lstset{style=mystyle}
+
+\renewcommand*\contentsname{TABLE OF CONTENTS}
+\newcommand*{\justifyheading}{\raggedleft}
+
+\titleformat{\chapter}[display]{\fontsize{12pt}{0em}\selectfont\bf}{\chaptertitlename\  \thechapter}{1em}{}
+\titlespacing*{\chapter}{0pt}{0pt}{15pt}
+
+
+\titleformat{\chapter}[display]{\fontsize{18pt}{0em}\selectfont\bf}{\chaptertitlename \hspace{.5em} \thechapter}{1em}{}
+
+\titleformat{\section}  {\normalfont\fontsize{14}{10}\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}
+  {\normalfont\fontsize{12}{12}\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}
+  {\normalfont\fontsize{10}{12}\selectfont\bfseries}{\thesubsubsection}{1em}{}
+%\renewcommand{\chaptername}{Chapter}
+
+\makeindex
